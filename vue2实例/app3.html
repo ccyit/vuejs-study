@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Vue 生命周期钩子</title>
+    <!-- <script src="http://localhost:8098"></script> -->
+    <script src="../js/vue.js"></script>
+
+</head>
+<body>
+
+
+    <script>
+    
+    var vm = new Vue({
+        data:{
+            a:1
+        },
+        created:function(){
+            console.log('a is: ' + this.a)
+        }
+    })
+    </script>
+
+</body>
+</html>

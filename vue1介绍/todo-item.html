@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue 基础</title>
+    <script src="http://localhost:8098"></script>
+    <script src="../js/vue.js"></script>
+
+</head>
+
+<body>
+
+
+    <ol id="app">
+        <!-- 创建一个 todo-item 组件的实例 -->
+        <todo-item 
+        v-for="item in todos"
+        :todo="item"
+        :key="item.id"
+        ></todo-item>
+        
+    </ol>
+
+    <script>
+        // 定义名为 todo-item 的新组件
+        Vue.component('todo-item', {
+            props : ['todo'],
+            template: '<li>{{todo.text}}</li>'
+        })
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                todos:[
+                    {id:0, text:"蔬菜"},
+                    {id:1, text:"奶酪"},
+                    {id:2, text:"其他"},
+                    {id:3, text:"..."}
+                ]
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>

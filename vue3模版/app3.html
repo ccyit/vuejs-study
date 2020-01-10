@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue attribute 属性</title>
+    <script src="http://localhost:8098"></script>
+    <script src="../js/vue.js"></script>
+
+</head>
+
+<body>
+
+    <div id="app">
+        <button v-bind:disabled="idButtonDisabled">button</button>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                idButtonDisabled: false
+            }
+        })
+    </script>
+
+
+
+</body>
+
+</html>

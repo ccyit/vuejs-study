@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue 基础</title>
+    <script src="http://localhost:8098"></script>
+    <script src="../js/vue.js"></script>
+
+</head>
+
+<body>
+
+    <div id="app">
+        <a v-bind:href="url">我的博客</a>
+        <!-- <a v-on:click="doSomething">我的博客</a> -->
+
+        <a v-bind:[arrributeName]="url">我的博客</a>
+        <!-- <a v-on:[eventName]="doSomething">我的博客</a> -->
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                url: "https://www.ccyit.cn",
+                arrributeName: "href",
+                eventName: "click"
+            },
+            
+            methods: {
+                doSomething: function () {
+
+                }
+            },
+        })
+    </script>
+
+</body>
+
+</html>

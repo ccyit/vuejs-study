@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue 实例属性和方法</title>
+    <script src="http://localhost:8098"></script>
+    <script src="../js/vue.js"></script>
+
+</head>
+
+<body>
+
+
+    <div id="example">
+        <h1>{{a}}</h1>
+    </div>
+
+    <script>
+
+        var data = { a: "Helloworld" }
+        var vm = new Vue({
+            el: '#example',
+            data: data
+        })
+
+        vm.$data === data // => true
+        vm.$el === document.getElementById('example') // => true
+
+        // $watch 是一个实例方法
+        vm.$watch('a', function (newValue, oldValue) {
+            // 这个回调将在 `vm.a` 改变后调用
+            console.log(newValue, oldValue);
+        })
+
+    </script>
+</body>
+
+</html>
