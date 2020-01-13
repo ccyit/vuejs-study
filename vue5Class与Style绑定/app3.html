@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue 数组语法</title>
+    <script src="http://localhost:8098"></script>
+    <script src="../js/vue.js"></script>
+
+</head>
+
+<body>
+
+
+    <div v-bind:class="[activeClass, errorClass]"></div>
+    <div v-bind:class="[isActive ? activeClass : '', errorClass]"></div>
+
+    <div v-bind:class="[{ active: isActive }, errorClass]"></div>
+    <script>
+
+        var vm = new Vue({
+
+
+            data: {
+                activeClass: 'active',
+                errorClass: 'text-danger'
+            }
+        })
+    </script>
+
+</body>
+
+</html>

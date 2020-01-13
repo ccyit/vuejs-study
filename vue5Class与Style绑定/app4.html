@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Vue 基础</title>
+    <script src="http://localhost:8098"></script>
+    <script src="../js/vue.js"></script>
+
+</head>
+<body>
+
+
+    <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>
+    <div v-bind:style="[baseStyles, overridingStyles]"></div>
+    <div v-bind:style="styleObject"></div>
+    <div :style="{ display: ['-webkit-box', '-ms-flexbox', 'flex'] }"></div>
+
+</body>
+</html>
