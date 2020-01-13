@@ -27,11 +27,7 @@
 
     <div id="blog-post-demo">
 
-        <blog-post
-  v-for="post in posts"
-  v-bind:key="post.id"
-  v-bind:title="post.title"
-></blog-post>
+        <blog-post v-for="post in posts" v-bind:key="post.id" v-bind:title="post.title"></blog-post>
     </div>
 
     <script>
