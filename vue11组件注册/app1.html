@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue 基础</title>
+    <script src="http://localhost:8098"></script>
+    <script src="../js/vue.js"></script>
+
+</head>
+
+<body>
+
+
+
+    <script>
+        Vue.component('component-a', { /* ... */ })
+        Vue.component('component-b', { /* ... */ })
+        Vue.component('component-c', { /* ... */ })
+
+        new Vue({ el: '#app' })
+    </script>
+
+<div id="app">
+    <component-a></component-a>
+    <component-b></component-b>
+    <component-c></component-c>
+  </div>
+</body>
+
+</html>

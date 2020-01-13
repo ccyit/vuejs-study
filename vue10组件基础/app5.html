@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue 基础</title>
+    <script src="http://localhost:8098"></script>
+    <script src="../js/vue.js"></script>
+
+</head>
+
+<body>
+
+
+    <script>
+        Vue.component('alert-box', {
+            template: `
+    <div class="demo-alert-box">
+      <strong>Error!</strong>
+      <slot></slot>
+    </div>
+  `
+        })
+
+    </script>
+
+    <!-- 组件会在 `currentTabComponent` 改变时改变 -->
+    <component v-bind:is="currentTabComponent"></component>
+
+    <div id="app">
+        <alert-box>
+            Something bad dsfaaa/.
+        </alert-box>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#app"
+
+        })
+    </script>
+
+</body>
+
+</html>

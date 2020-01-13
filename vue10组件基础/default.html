@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue 基础</title>
+    <script src="http://localhost:8098"></script>
+    <script src="../js/vue.js"></script>
+
+</head>
+
+<body>
+
+
+    <div id="app">
+
+        <!-- 组件会在 `currentTabComponent` 改变时改变 -->
+        <component v-bind:is="currentTabComponent"></component>
+    </div>
+
+    <script>
+    export default {
+        
+    }
+    </script>
+
+</body>
+
+</html>

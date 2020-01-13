@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <title>Vue 基础</title>
+    <title>Vue 列表渲染</title>
     <script src="http://localhost:8098"></script>
     <script src="../js/vue.js"></script>
 
 </head>
+
 <body>
+
+    <ul id="example-1">
+        <li v-for="item in items">
+            {{ item.message }}
+        </li>
+    </ul>
+
+    <script>
+        var example1 = new Vue({
+            el: '#example-1',
+            data: {
+                items: [
+                    { message: 'Foo' },
+                    { message: 'Bar' }
+                ]
+            }
+        })
+    </script>
 
 
 </body>
+
 </html>
